@@ -5,6 +5,7 @@ const {
   at,
   anagrams,
   fizzBuzz,
+  multiplesOfN,
 } = require('./index');
 
 describe('primitive code challenges', () => {
@@ -38,7 +39,7 @@ describe('primitive code challenges', () => {
     expect(anagrams('pictorialness', 'documentarily')).toBe(false);
   });
 
-  it('should identify strings that are anagrams', () => {
+  it('should return a list of numbers from 1-parameter, where divisible by 3 and 5, replace with FizzBuzz, where divisible by 3 replace with Fizz, where divisible by 5 replace with Buzz', () => {
     expect(fizzBuzz(16)).toEqual([
       1,
       2,
@@ -57,5 +58,10 @@ describe('primitive code challenges', () => {
       'FizzBuzz',
       16,
     ]);
+  });
+  it('should return an array with numbers 1-50 that are multiples of n', () => {
+    expect(multiplesOfN(5)).toEqual([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
+    expect(multiplesOfN(25)).toEqual([25, 50]);
+    expect(multiplesOfN(75)).toEqual([]);
   });
 });

@@ -90,8 +90,20 @@ function fizzBuzz(number) {
       arr.push(i);
     }
   }
-  console.log(arr);
   return arr;
 }
 
-module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams, fizzBuzz };
+function multiplesOfN(n){
+  const arr = [];
+
+  for(let i = 1; i <= 50; i ++) {
+    const multiplier = i * n;
+    if ((i * n) > 50) {
+      break;
+    }
+    arr.push(multiplier);
+  }
+  return arr;
+}
+
+module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams, fizzBuzz, multiplesOfN };
