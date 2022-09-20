@@ -8,7 +8,7 @@ const {
   multiplesOfN,
   addFirst,
   rootDigit,
-} = require('./index');
+} = require('./day-01');
 
 describe('primitive code challenges', () => {
   //PRIMITIVES
