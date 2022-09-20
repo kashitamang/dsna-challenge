@@ -6,9 +6,11 @@ const {
   anagrams,
   fizzBuzz,
   multiplesOfN,
+  addFirst
 } = require('./index');
 
 describe('primitive code challenges', () => {
+  //PRIMITIVES
   describe('reverseSentence', () => {
     it('should reverse a sentence', () => {
       expect(reverseSentence('alchemy rocks gold')).toBe('ymehcla skcor dlog');
@@ -63,5 +65,10 @@ describe('primitive code challenges', () => {
     expect(multiplesOfN(5)).toEqual([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
     expect(multiplesOfN(25)).toEqual([25, 50]);
     expect(multiplesOfN(75)).toEqual([]);
+  });
+  //HIGHER ORDER FUNCTIONS
+  it('should return an array with the parameter element first', () => {
+    const addOrange = addFirst('orange');
+    expect(addOrange(['red', 'blue', 'green'])).toStrictEqual(['orange', 'red', 'blue', 'green']);
   });
 });

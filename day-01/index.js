@@ -106,4 +106,11 @@ function multiplesOfN(n){
   return arr;
 }
 
-module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams, fizzBuzz, multiplesOfN };
+function addFirst(element){
+  return function addElement(arr){
+    arr.unshift(element);
+    return arr;
+  };
+}
+
+module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams, fizzBuzz, multiplesOfN, addFirst };
