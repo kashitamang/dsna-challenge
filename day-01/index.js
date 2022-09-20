@@ -38,4 +38,16 @@ function oddishOrEvenish(number) {
     return 'Invalid Entry';
   }
 }
-module.exports = { reverseSentence, titleCase, oddishOrEvenish };
+
+function at(arr, index){
+  if (index >= 0){
+    return (arr[index]);
+  } else if (index < 0) {
+    //to find the index 
+    return (arr[arr.length + index]);
+  } else {
+    return 'Invalid Entry';
+  }
+}
+
+module.exports = { reverseSentence, titleCase, oddishOrEvenish, at };
