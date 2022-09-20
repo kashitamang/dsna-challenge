@@ -50,4 +50,30 @@ function at(arr, index){
   }
 }
 
-module.exports = { reverseSentence, titleCase, oddishOrEvenish, at };
+function anagrams(wordOne, wordTwo){
+  const lengthOne = wordOne.length;
+  const lengthTwo = wordTwo.length;
+  if (lengthOne !== lengthTwo){
+    return 'Invalid Entry';
+  }
+  //wordOne = 'pat'
+  const arrayOne = wordOne
+    .split('')
+    //arrayOne= ['p','a','t']
+    .sort()
+    //arrayOne = ['a', 't', 'p']
+    .join('');
+    //arrayOne = 'atp'
+  const arrayTwo = wordTwo
+    .split('')
+    .sort()
+    .join('');
+  
+  if (arrayOne === arrayTwo){
+    return true;
+  } else {
+    return false;
+  }
+}
+
+module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams };
