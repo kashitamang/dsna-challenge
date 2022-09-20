@@ -6,7 +6,8 @@ const {
   anagrams,
   fizzBuzz,
   multiplesOfN,
-  addFirst
+  addFirst,
+  rootDigit,
 } = require('./index');
 
 describe('primitive code challenges', () => {
@@ -70,5 +71,11 @@ describe('primitive code challenges', () => {
   it('should return an array with the parameter element first', () => {
     const addOrange = addFirst('orange');
     expect(addOrange(['red', 'blue', 'green'])).toStrictEqual(['orange', 'red', 'blue', 'green']);
+  });
+  //RECURSIVE FUNCTIONS
+  it('should calculate the sum of digits in the number, and keep adding ', () => {
+    expect(rootDigit(123)).toBe(6);
+    expect(rootDigit(4322)).toBe(2);
+    expect(rootDigit(999888777)).toBe(9);
   });
 });

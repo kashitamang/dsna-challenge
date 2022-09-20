@@ -113,4 +113,19 @@ function addFirst(element){
   };
 }
 
-module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams, fizzBuzz, multiplesOfN, addFirst };
+function rootDigit(number){
+  const digits = number.toString().split('');
+  //output: ['1', '2', '3']
+  const numbers = digits.map(d => +d);
+  //output: [1, 2, 3]
+  const sum = numbers.reduce((a, b) => a + b);
+  //output: 6
+
+  if(sum > 9) {
+    return rootDigit(sum);
+  } else {
+    return sum;
+  }
+}
+
+module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams, fizzBuzz, multiplesOfN, addFirst, rootDigit };
