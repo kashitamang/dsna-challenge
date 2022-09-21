@@ -1,5 +1,4 @@
-Queue
----
+## Queue
 
 Queues are first-in, first-out data structures. Think of them like a line of people waiting for the bank teller.
 
@@ -8,6 +7,7 @@ Each new person joins the end of the line, and the bank teller helps the first p
 ## Challenge
 
 Implement `Queue` as an abstract data type (`class` that has an array property) that exposes:
+
 - `enqueue()` take an item
 - `dequeue()` return an item
 - `hasNext()` return true or false

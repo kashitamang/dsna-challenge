@@ -1,6 +1,6 @@
 const { Stack } = require('../Stack.js');
 
-describe('Stack', () => {
+describe('Stack Class', () => {
   it('#push should add a new item to the top of the stack', () => {
     const stack = new Stack();
     stack.push('🍌');
