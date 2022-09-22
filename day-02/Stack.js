@@ -23,36 +23,40 @@ class Stack {
   peek() {
     return this.#list[this.#list.length - 1];
   }
-  
-  checkSyntax(string) {
-    const bracketMap = {
-      '(': ')',
-      '[': ']',
-      '{': '}',
-    };
-    // Creating Stack
-    const stack = new Stack();
-    
-    // Looping through each bracket in the string
-    for (const bracket of string) {
-      
-      // If the bracket is an opening bracket push it onto the stack
-      if (bracketMap[bracket]) {
-        stack.push(bracket);
-      } else {
-        // If not, then pop a bracket off the stack.
-        const poppedBracket = stack.pop();
-        
-        // Check to see if the popped bracket is the matching bracket
-        if (bracketMap[poppedBracket] !== bracket) {
-          return false;
-        } else {
-          return true;
-        }
-      }
-    }
-    return stack.list.length === 0;
+
+  reverseStack() {
+    return this.#list.reverse();
   }
+  
+  // checkSyntax(string) {
+  //   const bracketMap = {
+  //     '(': ')',
+  //     '[': ']',
+  //     '{': '}',
+  //   };
+  //   // Creating Stack
+  //   const stack = new Stack();
+    
+  //   // Looping through each bracket in the string
+  //   for (const bracket of string) {
+      
+  //     // If the bracket is an opening bracket push it onto the stack
+  //     if (bracketMap[bracket]) {
+  //       stack.push(bracket);
+  //     } else {
+  //       // If not, then pop a bracket off the stack.
+  //       const poppedBracket = stack.pop();
+        
+  //       // Check to see if the popped bracket is the matching bracket
+  //       if (bracketMap[poppedBracket] !== bracket) {
+  //         return false;
+  //       } else {
+  //         return true;
+  //       }
+  //     }
+  //   }
+  //   return stack.list.length === 0;
+  // }
 
   get list() {
     return this.#list;

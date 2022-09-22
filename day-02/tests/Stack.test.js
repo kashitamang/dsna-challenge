@@ -18,20 +18,12 @@ describe('Stack Class', () => {
     expect(stack.peek()).toEqual('🍌');
   });
 
-  it('#checkSyntax should check for the correct sequence of brackets and parenthesis', () => {
-    const stack = new Stack();
-    expect(stack.checkSyntax('if(true) { return; }')).toBe(true);
-    expect(stack.checkSyntax('if(true( { return; }')).toBe(false);
-    expect(stack.checkSyntax('if(true) { return;')).toBe(false);
-    expect(stack.checkSyntax('(if(true) { return; }')).toBe(false);
-
-    // expect(stack.checkSyntax('( true && { name: 'foo' } )`)').toBe(true);
-    // expect(stack.checkSyntax('( true && { name: 'foo' ) )')).toBe(false);
-    // expect(stack.checkSyntax('( true && ( name: 'foo' } )')).toBe(false);
-    expect(stack.checkSyntax('((2 + 3) * (4 + 11 * (2 - 1)))')).toBe(true);
-
-    expect(stack.checkSyntax('((2 + 3) * (4 + 11 * 2 - 1)))')).toBe(false);
-    expect(stack.checkSyntax('((2 + 3) * (4 + 11 * (2 - 1))')).toBe(false);
+  describe('reverse', () => {
+    it('should reverse an array', () => {
+      const stack = new Stack([12, 3, 5, 7]);
+      stack.reverseStack();
+      expect(stack.list).toEqual([7, 5, 3, 12]);
+    });
   });
 
 });
