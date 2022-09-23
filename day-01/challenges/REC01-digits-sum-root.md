@@ -17,7 +17,7 @@ HINT: summing digits:
 
 ```js
 const digits = number.toString().split('');
-const numbers = digits.map(d => +d);
+const numbers = digits.map(d => + d);
 const sum = numbers.reduce((a, b) => a + b);
 ```
 

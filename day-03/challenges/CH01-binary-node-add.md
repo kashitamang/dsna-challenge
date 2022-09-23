@@ -13,8 +13,18 @@ class BinaryTreeNode {
     this.right = null;
   }
 
-  add(node) {
+  addToBinaryTree(node) {
     // Implement me!
+    if (node.value =< this.value) {
+      node.value = this.value;
+    } else if (node.value < this.value) {
+      if (node.left == null) {
+          node.left = {
+            value,
+            left: null,
+          };
+        };
+    }
   }
 }
 ```
